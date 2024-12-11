@@ -1,0 +1,208 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(to bottom right, #A8D0E6, #F2F2F2); /* Soft gradient: light blue to light gray */
+  background-color: #f4f4f9;
+  background-size: cover;
+  padding: 0;
+}
+
+/* Hero Section with Gradient */
+.hero {
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(168, 208, 230, 0.6), rgba(220, 220, 220, 0.6)), url('assets/dog1.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #1C2B2D; /* Dark slate gray for contrast */
+  padding: 120px 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;  /* Start with the hero section hidden */
+  animation: fadeInUp 1.5s ease-out forwards;  /* Apply animation */
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+.cta-button {
+  background-color: #65AEDD; /* Soft blue for the call-to-action button */
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4A90E2; /* Darker blue when hovered */
+  transform: scale(1.1);
+}
+
+/* Fade-in and Slide-up animation for hero elements */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Donation Progress Section with Soft Colors */
+.progress {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #A9D8E7, #B0D0D3); /* Light blue gradient for progress */
+  color: #1C2B2D;
+}
+
+.progress h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #D1E2E5;
+  height: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #65AEDD; /* Matching soft blue for progress bar */
+  width: 35%; /* Example width (you can update this dynamically) */
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.progress p {
+  font-size: 1.2rem;
+}
+
+/* How Your Donation Helps Section */
+.how-it-helps {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #FAFAFA; /* Very light gray background for contrast */
+}
+
+.how-it-helps h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #1C2B2D; /* Dark slate gray for headings */
+}
+
+.help-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #E1F5FE; /* Light cyan for card backgrounds */
+  color: #1C2B2D;
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.2rem;
+}
+
+/* Donation Form Section */
+.donate-form {
+  padding: 40px;
+  text-align: center;
+  background-color: #F9F9F9; /* Soft light gray background */
+}
+
+.donate-form input {
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 60%;
+  border: 2px solid #D1E2E5; /* Light gray border for input fields */
+  transition: border-color 0.3s ease;
+}
+
+.donate-form input:focus {
+  border-color: #65AEDD; /* Highlight the input with soft blue on focus */
+}
+
+.donate-form button {
+  padding: 15px 30px;
+  background-color: #65AEDD;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.donate-form button:hover {
+  background-color: #4A90E2; /* Darker blue on hover */
+  transform: scale(1.1); /* Slight scaling effect */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #1C2B2D; /* Dark slate gray for footer */
+  color: white;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  color: #A8D0E6; /* Light blue for links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
